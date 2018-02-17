@@ -1,0 +1,82 @@
+<p id="notice"><%= notice %></p>
+
+<%= render "menu" %>
+<h1 class='text-center'>Consultar un Evento</h1>
+
+<div class="container">
+  <div class="form-group row">
+    <span class= "col-sm-2 col-form-label"> 
+      <strong>Nombre:</strong> 
+    </span> 
+    <div class="col-sm-6">
+    <span class= "form-control">  <%=  @event.nombre %> </span>
+  </div>
+</div>
+
+  <div class="form-group row">
+    <span class= "col-sm-2 col-form-label"> 
+      <strong>Categoria:</strong>
+      </span> 
+    <div class="col-sm-6">
+    <span class= "form-control"><%= @event.categoria %></span>
+  </div>
+</div>
+
+  <div class="form-group row">
+    <span class= "col-sm-2 col-form-label">
+      <strong>Lugar:</strong>
+      </span> 
+    <div class="col-sm-6">
+    <span class= "form-control">  <%= @event.lugar %>
+    </span>
+  </div>
+</div>
+
+  <div class="form-group row">
+    <span class= "col-sm-2 col-form-label">
+    <strong>Direccion:</strong>
+      </span> 
+    <div class="col-sm-6">
+    <span class= "form-control">    <%= @event.direccion %>
+   </span>
+  </div>
+</div>
+
+  <div class="form-group row">
+    <span class= "col-sm-2 col-form-label">
+    <strong>Fecha inicio:</strong>
+      </span> 
+    <div class="col-sm-6">
+    <span class= "form-control">  
+  <%= @event.fecha_inicio %>
+   </span>
+  </div>
+</div>
+
+  <div class="form-group row">
+    <span class= "col-sm-2 col-form-label">
+    <strong>Fecha fin:</strong>
+      </span> 
+    <div class="col-sm-6">
+    <span class= "form-control">  
+  <%= @event.fecha_fin %>
+   </span>
+  </div>
+</div>
+
+  <div class="form-group row">
+    <span class= "col-sm-2 col-form-label">
+  <strong>Modalidad:</strong>
+        </span> 
+    <div class="col-sm-6">
+    <span class= "form-control">  
+<%= @event.modalidad %>
+   </span>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+<%= link_to 'Modificar', edit_event_path(@event), class: "btn btn-success" %> 
+<%= link_to 'Regresar', events_path, class: "btn btn-success"%>
+</div>
+</div>
